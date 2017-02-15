@@ -1,16 +1,18 @@
 var express = require('express');
+const bodyParser = require('body-parser');
 const tools = require('../tools/tools');
 
+var htmlParser = bodyParser.text({ type: 'text/html' });
 var router = express.Router();
 
 //Returns a randomly generated player character
 router.get("/character", function(req, res, next){
-	res.json(tools.charGen);
+	res.json(tools.characterGen());
 });
 
 //Returns a randomly generated map
 router.get("/map", function(req, res, next){
-	res.json(tools.mapGen);
+	res.json(tools.mapGen());
 });
 
 //Reads an enemy of the specified level

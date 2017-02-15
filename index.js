@@ -2,7 +2,6 @@ const express = require('express');
 const morgan = require('morgan');
 const underscore = require('underscore');
 const mustache = require('mustache');
-const bodyParser = require('body-parser');
 const MongoClient = require('mongodb').MongoClient;
 const tools = require('./tools/tools');
 const api = require('./routes/api');
@@ -23,8 +22,6 @@ MongoClient.connect(config.database.host, (error, database) => {
   	console.log("DB Connection Successful!");
   }
 });
-
-var htmlParser = bodyParser.text({ type: 'text/html' });
 
 if (env == "development"){
 	app.use(morgan('dev'));

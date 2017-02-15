@@ -1,7 +1,7 @@
 $('#characterGen').click(function(event){
     $.ajax({
         type: 'GET',
-        url: 'http//:localhost:3000/api/character',
+        url: '/api/character',
         success: function(data){
             document.getElementById('json').textContent=data;
         },
