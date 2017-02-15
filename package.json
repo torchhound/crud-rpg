@@ -4,7 +4,7 @@
   "description": "An rpg based around CRUD principles",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node tests/usersTest.js ; node tests/apiTest.js"
   },
   "author": "torchhound",
   "license": "ISC",
@@ -16,6 +16,8 @@
     "mongodb": "^2.2.22",
     "morgan": "^1.8.1",
     "mustache": "^2.3.0",
+    "supertest": "^3.0.0",
+    "tape": "^4.6.3",
     "underscore": "^1.8.3"
   }
 }
