@@ -9,12 +9,27 @@
   </head>
   <body>
     <div class="container-fluid">
-      <div class="jumbotron" id="hero">
+      <div class="jumbotron text-center" id="hero">
         <h1>CRUD RPG</h1>
         </div>
       </div>
-      <button type="button" class="btn btn-primary"  id="characterGen">Generate Character</button>
-      <p id="json"></p>
+      <div class="row text-center" id="main">
+        <div class="col-md-8 col-sm-8" id="game">
+          <button type="button" class="btn btn-primary"  id="characterGen">Generate Character</button>
+        </div>
+        <div class="col-md-4 col-sm-4" id="stats">
+          <h1>Character</h1>
+          <hr>
+          <h3 id="name"></h3>
+          <h3 id="race"></h3>
+          <h3 id="profession"></h3>
+          <h3 id="str"></h3>
+          <h3 id="int"></h3>
+          <h3 id="dex"></h3>
+          <h3 id="spt"></h3>
+          <h3 id="skills"></h3>
+        </div>
+      </div>
     </div>
     <footer class="footer">
           <div class="container">

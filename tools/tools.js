@@ -19,7 +19,14 @@ exports.characterGen = function() {
 	character.int = 0;
 	character.dex = 0;
 	character.spt = 0;
-	character.skills = [skillsGen(), skillsGen()];
+	var skillMatch = false;
+	while(skillMatch != true) {
+		character.skill1 = skillsGen();
+		character.skill2 = skillsGen();
+		if(character.skill1 != character.skill2) {
+			skillMatch = true;
+		};
+	};
 	return JSON.stringify(character);
 };
 
