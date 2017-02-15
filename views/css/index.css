@@ -1,4 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro')
+@import url('https://fonts.googleapis.com/css?family=Sansita')
+
+#map {
+  display: none;
+}
 
 /*sticky footer*/
 
@@ -10,7 +14,7 @@ html {
 body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
-  font-family: "Source Code Pro", monospace!important;
+  font-family: "Sansita", sans-serif!important;
 }
 
 .footer {

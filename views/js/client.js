@@ -19,3 +19,18 @@ $('#characterGen').click(function(event){
         }
     });
 });
+
+$('#characterGen').click(function(event){
+    $.ajax({
+        type: 'GET',
+        url: '/api/map',
+        success: function(data){
+            var jsonObj = JSON.parse(data);
+            document.getElementById('map').style.display = 'unset';
+            document.getElementById('map').textContent = data;
+        },
+        error: function(jqXHR, textStatus, errorThrown){
+            console.log('There has been a problem with your get operation: ' + jqXHR.responseText + ' ' + textStatus + ' ' + errorThrown);
+        }
+    });
+});
