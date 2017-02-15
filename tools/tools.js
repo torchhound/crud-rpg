@@ -8,7 +8,7 @@ module.export = {
 		var obj = new Object();
 		obj.name = "Brave Adventurer";
 		obj.class = "Warrior";
-		return obj;
+		return JSON.stringify(obj);
 	},
 	nameGen: function() {
 
