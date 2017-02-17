@@ -17,6 +17,29 @@
         <div class="col-md-8 col-sm-8" id="game">
           <button type="button" class="btn btn-primary"  id="characterGen">Generate Character</button>
           <div id="map"></div>
+          <div id="createEnemy">
+            <form>
+              <h1>Create an Enemy</h1>
+              <input type="text" id="name" placeholder="Name"><br>
+              <input type="text" id="str" placeholder="Strength"><br>
+              <input type="text" id="int" placeholder="Intelligence"><br>
+              <input type="text" id="dex" placeholder="Dexterity"><br>
+              <input type="text" id="spt" placeholder="Spirit"><br>
+              <select id="race">
+                <option value="Orc">Orc</option>
+                <option value="Warg">Warg</option>
+                <option value="Grizzly">Grizzly</option>
+                <option value="Bat">Bat</option>
+              </select>
+              <select id="level">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+              <input type="submit" class="btn btn-primary" id="enemySubmit" value="Submit">
+            </form>
+          </div>
         </div>
         <div class="col-md-4 col-sm-4" id="stats">
           <h1>Character</h1>

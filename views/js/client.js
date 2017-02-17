@@ -34,3 +34,35 @@ $('#characterGen').click(function(event){
         }
     });
 });
+
+$('#enemySubmit').click(function(event){
+
+    var name = $('#name').val();
+    var str = $('#str').val();
+    var int = $('#int').val();
+    var spt = $('#spt').val();
+    var dex = $('#dex').val();
+    var level = $('#level').val();
+    var race = $('#race').val();
+
+    var postString = 'name=' + name + '&str=' + str + '&int=' + int + '&spt=' + spt + '&dex=' + dex + '&level=' + level + '&race=' + race;
+
+    if(name==''||str==''||dex==''||int==''||spt=='') {
+        alert("Please Fill All Fields");
+    } else {
+        $.ajax({
+            type: 'POST',
+            url: '/api/enemy',
+            data: postString,
+            contentType : "application/x-www-form-urlencoded",
+            success: function(data){
+                document.getElementById('createEnemy').style.display = 'none';
+            },
+            error: function(jqXHR, textStatus, errorThrown){
+                alert('There has been a problem with submitting a form');
+                console.log('There has been a problem with your post operation: ' + jqXHR.responseText + ' ' + textStatus + ' ' + errorThrown);
+            }
+        });
+    };
+});
+

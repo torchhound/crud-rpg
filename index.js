@@ -12,16 +12,15 @@ var config = require('./config')[env];
 const port = config.server.port;
 const app = express();
 
-var db;
-
-MongoClient.connect(config.database.host, (error, database) => {
-  if(error) {
-  	return console.log(error);
-  } else {
-  	db = database;
-  	console.log("DB Connection Successful!");
-  }
-});
+if(env == 'development') {
+	MongoClient.connect(config.database.host, (error, database) => {
+  	if(error) {
+  		return console.log(error);
+ 	} else {
+  		console.log("DB Connection Successful!");
+  	}
+	});
+};
 
 if (env == "development"){
 	app.use(morgan('dev'));

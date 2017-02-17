@@ -4,7 +4,7 @@
   "description": "An rpg based around CRUD principles",
   "main": "index.js",
   "scripts": {
-    "test": "node tests/usersTest.js ; node tests/apiTest.js"
+    "test": "node tests/endpointTests.js"
   },
   "author": "torchhound",
   "license": "ISC",
