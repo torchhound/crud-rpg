@@ -22,7 +22,7 @@ if(env == 'development') {
 	});
 };
 
-if (env == "development"){
+if(env == "development") {
 	app.use(morgan('dev'));
 };
 app.engine('html', require('ejs').renderFile); 

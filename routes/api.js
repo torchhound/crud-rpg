@@ -43,7 +43,6 @@ router.post("/enemy", urlParser, function(req, res, next){
 	console.log(enemy);
   	db.collection('enemies').insertOne(enemy, function(err, records) {
 		if (err) throw err;
-		if (env == 'development') console.log("Record added as " + records[0]._id);
 	});
 	/*
 	MongoClient.connect(config.database.host, (error, db) => {
